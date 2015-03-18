@@ -22,7 +22,7 @@ Clone and use project for Scala apps.
 | scalaz-core        | 7.0.6   |
 | scalaz-contrib-210 | 0.2     |
 | scala-logging      | 3.1.0   |
-| ficus              | 1.1.1   |
-| scalatest_2.11     | 2.2.1   |
+| ficus              | 1.1.2   |
+| scalatest_2.11     | 2.2.4   |
 
 
