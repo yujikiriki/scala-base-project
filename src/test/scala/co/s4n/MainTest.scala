@@ -7,8 +7,8 @@ import org.scalatest.FunSuite
  */
 class MainTest extends FunSuite {
 
-  test( "Hello world!" ) {
-    info( "Testing the Hello world!" )
-    assert( Main.method01 === "Hello world!" )
+  test("Hello world!") {
+    info("Testing the Hello world!")
+    assert(Main.method01 === "Hello world!")
   }
 }

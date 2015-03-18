@@ -2,22 +2,27 @@ import spray.revolver.RevolverPlugin._
 
 seq(Revolver.settings: _*)
 
+releaseSettings
+
+scalariformSettings
+
+organization := "co.s4n"
+
 name := "scala-base-project"
 
-version := "0.0.1"
-
-scalaVersion := "2.11.4"
+scalaVersion := "2.11.6"
 
 resolvers ++= Seq(
   "releases" at "http://oss.sonatype.org/content/repositories/releases"
 )
 
 libraryDependencies ++= Seq(
-  "com.chuusai"                 %%  "shapeless"       % "2.0.0" withSources() withJavadoc(),
-  "org.scalaz"                  %%  "scalaz-core"     % "7.1.0" withSources() withJavadoc(),
-  "com.typesafe.scala-logging"  %%  "scala-logging"   % "3.1.0" withSources() withJavadoc(),
-  "net.ceedubs"                 %%  "ficus"           % "1.1.1" withSources() withJavadoc(),
-  "org.scalatest"               %   "scalatest_2.11"  % "2.2.1" % "test"
+  "com.chuusai"                 %%  "shapeless"                 % "2.1.0" withSources() withJavadoc(),
+  "org.scalaz"                  %%  "scalaz-core"               % "7.0.6" withSources() withJavadoc(),
+  "org.typelevel"               %%  "scalaz-contrib-210"        % "0.2"   withSources() withJavadoc(),
+  "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.1.0" withSources() withJavadoc(),
+  "net.ceedubs"                 %%  "ficus"                     % "1.1.2" withSources() withJavadoc(),
+  "org.scalatest"               %   "scalatest_2.11"            % "2.2.4" % "test"
 )
 
 scalacOptions ++= Seq(
@@ -36,3 +41,19 @@ scalacOptions ++= Seq(
   "-Ywarn-value-discard",
   "-Xfuture"     
 )
+
+publishMavenStyle := true
+
+pomIncludeRepository := { _ => false }
+
+publishArtifact in Test := false
+
+publishTo := {
+  val nexus = "http://somewhere/nexus/"
+  if (version.value.trim.endsWith("SNAPSHOT"))
+    Some("Nexus Snapshots" at nexus + "content/repositories/snapshots/")    
+  else
+    Some("Nexus Releases" at nexus + "content/repositories/releases")
+}
+
+credentials += Credentials("Sonatype Nexus Repository Manager", "somewhere", "user", "password")
