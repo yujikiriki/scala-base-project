@@ -2,8 +2,6 @@ import spray.revolver.RevolverPlugin._
 
 seq(Revolver.settings: _*)
 
-releaseSettings
-
 scalariformSettings
 
 organization := "co.s4n"
@@ -17,12 +15,12 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.chuusai"                 %%  "shapeless"                 % "2.2.3" withSources() withJavadoc(),
-  "org.scalaz"                  %%  "scalaz-core"               % "7.1.3" withSources() withJavadoc(),
-  "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.1.0" withSources() withJavadoc(),
-  "net.ceedubs"                 %%  "ficus"                     % "1.1.2" withSources() withJavadoc(),
-  "org.scalatest"               %   "scalatest_2.11"            % "2.2.4" % "test"
+  "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.1.0"     withSources() withJavadoc(),
+  "net.ceedubs"                 %%  "ficus"                     % "1.1.2"     withSources() withJavadoc(),
+  "org.scalatest"               %   "scalatest_2.11"            % "2.2.4"     % "test"
 )
+
+coverageEnabled := true
 
 scalacOptions ++= Seq(
   "-deprecation",           

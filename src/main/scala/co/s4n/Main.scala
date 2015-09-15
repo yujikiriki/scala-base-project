@@ -1,7 +1,10 @@
 package co.s4n
 
-object Main extends App {
-  println("Hello world!")
+import com.typesafe.scalalogging.LazyLogging
 
-  def method01: String = "Hello world!"
+object Main extends App with LazyLogging {
+
+  def hello(a: String): Unit = {
+    logger.info("Hello world")
+  }
 }
