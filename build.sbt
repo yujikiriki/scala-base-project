@@ -15,12 +15,15 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
+  "ch.qos.logback"              %   "logback-classic"           % "1.1.3",
+  "com.chuusai"                 %%  "shapeless"                 % "2.2.5"     withSources(),
+  "org.scalaz"                  %%  "scalaz-core"               % "7.1.4"     withSources(),
   "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.1.0"     withSources() withJavadoc(),
   "net.ceedubs"                 %%  "ficus"                     % "1.1.2"     withSources() withJavadoc(),
   "org.scalatest"               %   "scalatest_2.11"            % "2.2.4"     % "test"
 )
 
-coverageEnabled := true
+coverageEnabled := false
 
 scalacOptions ++= Seq(
   "-deprecation",           
