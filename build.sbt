@@ -15,11 +15,11 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "ch.qos.logback"              %   "logback-classic"           % "1.1.3",
-  "com.chuusai"                 %%  "shapeless"                 % "2.2.5"     withSources(),
-  "org.scalaz"                  %%  "scalaz-core"               % "7.1.4"     withSources(),
+  "com.chuusai"                 %%  "shapeless"                 % "2.2.5"     withSources() withJavadoc(),
+  "org.scalaz"                  %%  "scalaz-core"               % "7.1.4"     withSources() withJavadoc(),
   "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.1.0"     withSources() withJavadoc(),
   "net.ceedubs"                 %%  "ficus"                     % "1.1.2"     withSources() withJavadoc(),
+  "ch.qos.logback"              %   "logback-classic"           % "1.1.3",
   "org.scalatest"               %   "scalatest_2.11"            % "2.2.4"     % "test"
 )
 
