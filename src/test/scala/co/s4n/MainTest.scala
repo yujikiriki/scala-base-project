@@ -5,7 +5,7 @@ import org.scalatest.FunSuite
 class MainTest extends FunSuite {
 
   test("Hello world!") {
-
-    assert(true)
+    info("Hello world")
+    assert("Hello world" === Main.m())
   }
 }
