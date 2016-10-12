@@ -8,19 +8,19 @@ organization := "co.s4n"
 
 name := "scala-base-project"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 resolvers ++= Seq(
   "releases" at "http://oss.sonatype.org/content/repositories/releases"
 )
 
 libraryDependencies ++= Seq(
-  "com.chuusai"                 %%  "shapeless"                 % "2.2.5"     withSources() withJavadoc(),
-  "org.scalaz"                  %%  "scalaz-core"               % "7.1.4"     withSources() withJavadoc(),
-  "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.1.0"     withSources() withJavadoc(),
+  "com.chuusai"                 %%  "shapeless"                 % "2.3.2"     withSources() withJavadoc(),
+  "org.scalaz"                  %%  "scalaz-core"               % "7.2.6"     withSources() withJavadoc(),
+  "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.5.0"     withSources() withJavadoc(),
   "net.ceedubs"                 %%  "ficus"                     % "1.1.2"     withSources() withJavadoc(),
-  "ch.qos.logback"              %   "logback-classic"           % "1.1.3",
-  "org.scalatest"               %   "scalatest_2.11"            % "2.2.4"     % "test"
+  "ch.qos.logback"              %   "logback-classic"           % "1.1.7",
+  "org.scalatest"               %   "scalatest_2.11"            % "3.0.0"     % "test"
 )
 
 coverageEnabled := false
