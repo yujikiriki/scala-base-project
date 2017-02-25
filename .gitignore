@@ -30,3 +30,7 @@ project/plugins/
 # Ensime
 .ensime
 .ensime_cache/
+
+# vim swap files
+*.swp
+

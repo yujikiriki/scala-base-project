@@ -1,26 +1,20 @@
-import spray.revolver.RevolverPlugin._
-
-seq(Revolver.settings: _*)
-
 scalariformSettings
 
 organization := "co.s4n"
 
 name := "scala-base-project"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.1"
 
 resolvers ++= Seq(
   "releases" at "http://oss.sonatype.org/content/repositories/releases"
 )
 
 libraryDependencies ++= Seq(
-  "com.chuusai"                 %%  "shapeless"                 % "2.3.2"     withSources() withJavadoc(),
-  "org.scalaz"                  %%  "scalaz-core"               % "7.2.6"     withSources() withJavadoc(),
   "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.5.0"     withSources() withJavadoc(),
-  "net.ceedubs"                 %%  "ficus"                     % "1.1.2"     withSources() withJavadoc(),
+  "com.iheart"                  %%  "ficus"                     % "1.4.0", 
   "ch.qos.logback"              %   "logback-classic"           % "1.1.7",
-  "org.scalatest"               %   "scalatest_2.11"            % "3.0.0"     % "test"
+  "org.scalatest"               %   "scalatest_2.12"            % "3.0.0"     % "test"
 )
 
 coverageEnabled := false
