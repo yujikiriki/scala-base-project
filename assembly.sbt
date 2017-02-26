@@ -1,4 +1,4 @@
-outputPath in assembly := file( "dist/scala-base-project.jar" )
+assemblyOutputPath := file( "dist/scala-base-project.jar" )
 
 test in assembly := {}
 
