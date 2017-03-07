@@ -9,3 +9,4 @@ class MainTest extends FunSuite {
     assert("Hello world" === Main.m())
   }
 }
+
