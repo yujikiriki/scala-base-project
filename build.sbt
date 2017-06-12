@@ -6,7 +6,7 @@ organization := "co.s4n"
 
 name := "scala-base-project"
 
-scalaVersion := "2.12.1"
+scalaVersion := "2.12.2"
 
 resolvers ++= Seq(
   "releases" at "http://oss.sonatype.org/content/repositories/releases"
