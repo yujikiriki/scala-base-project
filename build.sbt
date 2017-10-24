@@ -1,22 +1,18 @@
-// build.sbt
-
-scalariformSettings
-
 organization := "co.s4n"
 
 name := "scala-base-project"
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.4"
 
 resolvers ++= Seq(
   "releases" at "http://oss.sonatype.org/content/repositories/releases"
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.5.0"     withSources() withJavadoc(),
+  "com.typesafe.scala-logging"  %%  "scala-logging"             % "3.7.2" withSources() withJavadoc(),
   "com.iheart"                  %%  "ficus"                     % "1.4.0", 
-  "ch.qos.logback"              %   "logback-classic"           % "1.1.7",
-  "org.scalatest"               %   "scalatest_2.12"            % "3.0.0"     % "test"
+  "ch.qos.logback"              %   "logback-classic"           % "1.2.3",
+  "org.scalatest"               %%  "scalatest"                 % "3.0.4" % "test"
 )
 
 coverageEnabled := false
