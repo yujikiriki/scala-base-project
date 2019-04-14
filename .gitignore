@@ -34,3 +34,7 @@ project/plugins/
 # vim swap files
 *.swp
 
+# Bloop
+.bloop
+.metals
+
