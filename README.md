@@ -1,7 +1,7 @@
 Clone and use project for Scala apps.
 
-+ Scala 2.11.7
-+ sbt 0.13.9
++ Scala 2.12.8
++ sbt 1.2.8
 
 #### Plugins
 
